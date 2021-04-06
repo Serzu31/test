@@ -1,0 +1,623 @@
+<!doctype html>
+<!-- PROYECTO grupo #4
+ Ficha: 2252471
+ Aprendices: Orealis Ospina Puentes,Yeseth Santiago Reyes Vega,Mabel Tatiana Diaz Saavedra,Camilo Andrés Sánchez Guevara,Sergio Andrés Henao Suarez
+ Navegador: Google, Firefox, internet explorer, microsoft edge -->
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/Evaluación.css" />
+
+
+    <title>GYM STYLE´S</title>
+</head>
+
+<body>
+    <!--navbar-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <nav class="navbar navbar-expand-lg navbar navbar-dark " id="navbar">
+        <div class="container-fluid">
+            <img src="img/Logo 1.1.png" alt="GYM STYLE" id="logo">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" button type="button" class="btn btn-dark me-2 " id="navbar2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        ¿Quienes somos?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" button type="button" class="btn btn-dark me-2 " id="navbar2" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                        Programas
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" button type="button" class="btn btn-dark me-2 " id="navbar2" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                        Atención al cliente
+                    </a>
+                    </li>
+                    <li id="apc" class="nav-item">
+                        <a href="#" button type="button" class="btn btn-dark me-2 " id="navbar2" data-bs-toggle="modal" data-bs-target="#exampleModal6">
+                        Apartar clase
+                    </a>
+                    </li>
+                </ul>
+                <span class="navbar-text" id="names">
+                    <button class="btn btn-outline-warning me-2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal4" id="registrate">Regístrate</button>
+                    <button class="btn btn-outline-light me-2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal5" id="iniciar">Iniciar Sesion</button>
+                </span>
+            </div>
+        </div>
+    </nav>
+    <!--final de navar-->
+    <!--modales-->
+    <!-- Modal1 -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header" id="modal1">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        <img src="img/Logo 1.1.png" alt="GYM STYLE" id="logo">
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modal1">
+                    Somos un gimnasio enfocado en la salud y el bienestar de nuestros clientes ya que nuestros instructores para las distintas modalidades son de caracter profesional para que asi nuestros clientes se sientan comodos y seguros en nuestro gimnasio.
+                </div>
+                <div class="modal-footer" id="modal1">
+                    <button type="button" class="btn btn-outline-warning" data-bs-dismiss="modal" id="boton1">ACEPTAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header" id="modal1">
+                    <h5 class="modal-title" id="exampleModalLabel2">
+                        <img src="img/Logo 1.1.png" alt="GYM STYLE" id="logo">
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modal1">
+                    <!--navs and tabs-->
+                    <form onsubmit="recibirDudaQuejaReclamo();">
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation" onclick="openTab(event, 'uno')">
+                                <button class="btn btn-outline-light me-2 nav-link active " id="pills-quejas-tab" data-bs-toggle="pill" data-bs-target="#pills-quejas" type="button" role="tab" aria-controls="pills-quejas" aria-selected="true">Quejas</button>
+                            </li>
+                            <li class="nav-item" role="presentation" onclick="openTab(event, 'dos')">
+                                <button class="btn btn-outline-light me-2 nav-link" id="pills-dudas-tab" data-bs-toggle="pill" data-bs-target="#pills-dudas" type="button" role="tab" aria-controls="pills-dudas" aria-selected="false">Dudas</button>
+                            </li>
+                            <li class="nav-item" role="presentation" onclick="openTab(event, 'tres')">
+                                <button class="btn btn-outline-light me-2 nav-link" id="pills-reclamos-tab" data-bs-toggle="pill" data-bs-target="#pills-reclamos" type="button" role="tab" aria-controls="pills-reclamos" aria-selected="false">Reclamos</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-quejas" role="tabpanel" aria-labelledby="pills-quejas-tab">Escriba aqui sus Quejas<br>
+                                <!--caja de quejas-->
+                                <td rowspan="3" class="Estilo1"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="Estilo2"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="Estilo1"><textarea id="txtQuejas" cols="40" rows="5"></textarea></td>
+                                </tr>
+                                <tr>
+                                    </td>
+                            </div>
+                            <div class="tab-pane fade" id="pills-dudas" role="tabpanel" aria-labelledby="pills-dudas-tab">Escriba aqui sus Dudas
+                                <!--caja de dudas-->
+                                <td rowspan="3" class="Estilo1"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="Estilo2"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="Estilo1"><textarea id="txtDudas" cols="40" rows="5"></textarea></td>
+                                </tr>
+                                <tr>
+                                    </td>
+                            </div>
+                            <div class="tab-pane fade" id="pills-reclamos" role="tabpanel" aria-labelledby="pills-reclamos-tab">Escriba aqui sus Reclamos
+                                <!--caja de reclamos-->
+                                <td rowspan="3" class="Estilo1"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="Estilo2"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="Estilo1"><textarea id="txtReclamos" cols="40" rows="5"></textarea></td>
+                                </tr>
+                                <tr>
+                                    </td>
+                            </div>
+                        </div>
+                        <div class="modal-footer" id="modal1">
+                            <button type="submit" class="btn btn-outline-light">ENVIAR</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--modal3-->
+    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-xl ">
+            <div class="modal-content">
+                <div class="modal-header" id="modal1">
+                    <h5 class="modal-title" id="exampleModalLabel3">
+                        <img src="img/Logo 1.1.png" alt="GYM STYLE" id="logo">
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modal1">
+                    <div class="row">
+                        <div class="d-flex align-items-start">
+                            <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                <br>
+                                <button class=t ext-dark class="btn btn-outline-white" class="nav-link active" id="v-pills-Entrenamiento-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Entrenamiento" type="button" role="tab" aria-controls="v-pills-Entrenamiento" aria-selected="true"><b>Entrenamiento</b></button>
+                                <br>
+                                <button class=t ext-dark class="btn btn-outline-white" class="nav-link" id="v-pills-Yoga-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Yoga" type="button" role="tab" aria-controls="v-pills-Yoga" aria-selected="false"><b>Yoga</b></button>
+                                <br>
+                                <button class=t ext-dark class="btn btn-outline-white" class="nav-link" id="v-pills-Boxeo-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Boxeo" type="button" role="tab" aria-controls="v-pills-Boxeo" aria-selected="false"><b>Boxeo</b></button>
+                                <br>
+                                <button class=t ext-dark class="btn btn-outline-white" class="nav-link" id="v-pills-TRX-tab" data-bs-toggle="pill" data-bs-target="#v-pills-TRX" type="button" role="tab" aria-controls="v-pills-TRX" aria-selected="false"><b>TRX</b></button>
+                            </div>
+                            <div class="tab-content" id="v-pills-tabContent">
+                                <div class="tab-pane fade show active" id="v-pills-Entrenamiento" role="tabpanel" aria-labelledby="v-pills-Entrenamiento-tab">
+                                    <div class="row">
+                                        <article class="col-lg-6 col-sm-12 col-md-12 ">                                            
+                                                <img id="entr" src="img/ENTRENAMIENTO.png" alt="prueba">
+                                        </article>
+                                        <article class="col-lg-6 col-md-12 col-sm-12">
+                                            <p id="texto" class="text-white">
+                                                Para Gym Style's es importante la salud de las personas participes del programa, y en esta seccion de "ENTRENAMIENTO" queremos mostrar que el ejercicio físico ayuda a la gente a perder peso y reduce el riesgo de desarrollar algunas enfermedades como obesidade
+                                                hipertensión
+                                            </p>
+                                        </article>
+                                        <p id="texto" class="text-white">
+                                            Ven a Gym Style's! a que participes en nuestros programas preparados para ti tendras grandes oportunidades para mejorar tu salud y mantenerte en forma, recuerda que Gym Style's tiene preparado grandes ofertas y promociones para tus programas.<br>¡QUE
+                                            ESPERAS PARA INSCRIBIRTE!
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-Yoga" role="tabpanel" aria-labelledby="v-pills-Yoga-tab">
+                                    <div class="row">
+                                        <article class="col-lg-6 col-sm-12 col-md-12 ">
+                                                <img id="imyoga" src="img/YOGA.png" alt="prueba">
+                                        </article>
+                                        <article class="col-lg-6 col-md-12 col-sm-12">
+                                            <p id="texto" class="text-white">
+                                                En Gym Style's es importante la salud de nuestros usuarios. por eso con el yoga queremos ofrecerles nuestras clases, incrementando la autoestima,y reduciendo el estrés y la ansiedad.
+                                            </p>
+                                            <p id="texto" class="text-white">
+                                                En Gym Style's práctica yoga conectando el cuerpo, la respiración y la mente. prácticando posturas físicas
+                                            </p>
+                                        </article>
+                                        <p id="texto" class="text-white">
+                                            Ejercicios de respiración y meditación para mejorar la salud general Recuerda que Gym Style's quiere brindarte programas a tu tiempo y disposicion, asi mismo que tengas una buena salud con las practicas de yoga. ¡Recuerda que estamos para ti!
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-Boxeo" role="tabpanel" aria-labelledby="v-pills-Boxeo-tab">
+                                    <div class="row">
+                                        <article class="col-lg-6 col-sm-12 col-md-12 ">
+                                                <img id="imbox" src="img/BOXEO.png" alt="prueba">
+                                        </article>
+                                        <article class="col-lg-6 col-md-12 col-sm-12">
+                                            <p id="texto" class="text-white">
+                                                El boxeo es un deporte muy útil para liberar la tensión del día a día, a su vez, un mejor autoconcepto que supone una autoestima más alta y un nivel de felicidad mayor ¿Que beneficios tiene el Boxeo para una mujer? Tonifica tu cuerpo: el entrenamiento
+                                                de boxeo incrementa la masa muscular y por ende es más que un ejercicio cardiorrespiratorio
+                                            </p>
+                                        </article>
+                                        <p id="texto" class="text-white">
+                                            cuando haces boxeo concentras tu energía en esas zonas que suelen ser difíciles para las mujeres, como los brazos, los abdominales y las piernas dejando de lado el boxeo competitivo. ¡Para Gym Style's tu salud es lo mas importante!
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-TRX" role="tabpanel" aria-labelledby="v-pills-TRX-tab">
+                                    <div class="row">
+                                        <article class="col-lg-6 col-sm-12 col-md-12 ">
+                                                <img id="imtrx" src="img/TRX.png" alt="prueba">
+                                        </article>
+                                        <article class="col-lg-6 col-md-12 col-sm-12">
+                                            <p id="texto" class="text-white">
+                                                En Gym Style's el entrenamiento funcional pretendemos trabajar los músculos mediante la imitación de movimientos cotidianos o gestos deportivos específicos, en base a esto, Gym Style's quiere hacer que cada rutina de entrenamiento funcional debe estar
+                                                individualizada y focalizada para cada persona, su disciplina deportiva y sus características específicas.
+                                            </p>
+                                        </article>
+                                        <p id="texto" class="text-white">
+                                            El entrenamiento funcional trabaja en cada sesión la flexibilidad, la estabilidad base del cuerpo, el equilibrio, la movilidad y el entrenamiento de fuerza. El principal objetivo de Gym Style's para el entrenamiento funcional es mejorar la funcionalidad
+                                            del organismo, sobre todo aumentando la coordinación, y su salud.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--footer-->
+                </div>
+                <div class="modal-footer" id="modal1">
+                    <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModal5">Apartar clase </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--MODAL 4-->
+    <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
+        <div class="modal-dialog modal-lg ">
+            <div class="modal-content">
+                <div class="modal-header" id="modal1">
+                    <h5 class="modal-title" id="exampleModalLabel4">
+                        <img src="img/Logo 1.1.png" alt="GYM STYLE" id="logo">
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modal1">
+                    <main role="main" class="container my-auto">
+                        <div class="row">
+                            <div id="login" class="col-lg-6  col-md-6 offset-md-3 col-12">
+                                <form id="formulario" onsubmit="Registrar();">
+                                    <div class="form-group">
+                                        <br>
+                                        <label for="correo">Correo Electrónico</label>
+                                        <input id="correo" name="correo" class="form-control" type="email" placeholder="Correo electrónico">
+                                    </div>
+                                    <div class="form-group">
+                                        <br>
+                                        <label for="nombre">Nombre Completo</label>
+                                        <input id="nombre" name="nombre" class="form-control" type="text" placeholder="Nombre Completo">
+                                    </div>
+                                    <div class="form-group">
+                                        <br>
+                                        <label for="contraseña1">Contraseña</label>
+                                        <input id="contraseña1" name="contraseña1" class="form-control" type="password" placeholder="Contraseña">
+                                    </div>
+                                    <div class="form-group">
+                                        <br>
+                                        <label for="contraseña2">Confirmar Contraseña</label>
+                                        <input id="contraseña2" name="contraseña2" class="form-control" type="password" placeholder="Confirmar Contraseña">
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <table class="table">
+                                            <tr width="200"></tr>
+                                                <td>
+                                                    <button class="btn btn-outline-light button-custom mb-2" data-bs-dismiss="modal">
+                                                    Cancelar 
+                                                    </button>
+                                                </td>
+                                                <td>
+                                                    <button id="regbt" type="submit" class="btn btn-outline-light button-custom" data-bs-dismiss="modal">
+                                                    Registrarse
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--MODAL 5-->
+    <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel5" aria-hidden="true">
+        <div class="modal-dialog modal-lg ">
+            <div class="modal-content">
+                <div class="modal-header" id="modal1">
+                    <h5 class="modal-title" id="exampleModalLabel5">
+                        <img src="img/Logo 1.1.png" alt="GYM STYLE" id="logo">
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modal1">
+                    <main role="main" class="container my-auto">
+                        <div class="row">
+                            <div id="login" class="col-lg-6  col-md-6 offset-md-3 col-12">
+                                <form onsubmit="ValidarUsuario();">
+                                    <div class="form-group">
+                                        <label for="correo">Correo</label>
+                                        <input id="Inputcorreo" name="correo" class="form-control" type="email" placeholder="Correo electrónico">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="palabraSecreta">Contraseña</label>
+                                        <input id="InputpalabraSecreta" name="palabraSecreta" class="form-control" type="password" placeholder="Contraseña">
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <table class="table">
+                                            <tr width="200">
+                                                <td>
+                                                    <button class="btn btn-outline-light button-custom mb-2" data-bs-dismiss="modal">
+                                                    Cancelar 
+                                                    </button>
+                                                </td>
+                                                <td>
+                                                    <button id="isbt" type="submit" class="btn btn-outline-light button-custom ">
+                                                    Iniciar sesion
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <p>Si no tienes una cuenta <a href="#">¡Registrate aquí!</a></p>
+                                </form>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal 6-->
+    <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
+        <div class="modal-dialog modal-lg ">
+            <div class="modal-content">
+                <div class="modal-header" id="modal1">
+                    <h5 class="modal-title" id="exampleModalLabel4">
+                        <img src="img/Logo 1.1.png" alt="GYM STYLE" id="logo">
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modal1">
+                    <main role="main" class="container my-auto">
+                        <div class="row">
+                            <h3 class="text text-center">Clases disponibles</h3>
+                                <div class="row">
+                                    <div class="col-lg-6 col-sm-12">
+                                        <br>
+                                        <p>Boxeo</p>
+                                        <button type="button" id="box1" class="btn btn-light btn-sm">Lunes: 6am-12pm</button>
+                                        <button type="button" id="box2" class="btn btn-light btn-sm">Miercoles: 6am-12pm</button>            
+                                    </div>
+                                    <div class="col-lg-6 col-sm-12">
+                                        <br>
+                                        <p>TRX</p>
+                                        <button type="button" id="trx" class="btn btn-light btn-sm">Lunes: 1pm-6pm</button>
+                                        <button type="button" id='trx2' class="btn btn-light btn-sm">Miercoles: 1am-6pm</button>
+                                    </div>
+                                </div>
+        
+                                <div class="row">
+                                    <div class="col-lg-6 col-sm-12">
+                                        <br>
+                                        <p>Yoga</p>
+                                        <button type="button" id="yg" class="btn btn-light btn-sm">Martes: 6am-12pm</button>
+                                        <button type="button" id="yg2" class="btn btn-light btn-sm">Jueves: 6am-12pm</button>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-12">
+                                        <br>
+                                        <p>Entrenamiento Funcional</p>
+                                        <button type="button" id="ent" class="btn btn-light btn-sm">Martes: 1pm-6pm</button>
+                                        <button type="button" id="ent2" class="btn btn-light btn-sm">Jueves: 1pm-6pm</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">                            
+                                
+                                    <button class="btn btn-outline-light button-custom me-md-2" data-bs-dismiss="modal">
+                                        Cerrar 
+                                    </button>
+                                    
+                                </div>
+                           
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--final de los modales-->
+    <!--portada-->
+    <div class="container-fluid" id="fondo">
+        <div class="row">
+            <div class=" col-12">
+                <img class="img-fluid" src="IMG/portada1.2.png" alt="portada">
+            </div>
+        </div>
+    </div>
+    <!--final de portada-->
+    <div class="row">
+        <div class="row mt-3 justify-content-center" id="row2">
+            <div class="col-12 col-lg-4 col-md-6 col-sm align-self-center">
+                <figure>
+                    <img src="IMG/primera.jpg">
+                    <div class="capa">
+                        <h3>¿Por que entrenar con <br>GYM STYLE'S?</h3>
+                        <p>
+                            <button type="button" class="btn btn-outline-light">Mas info</button>
+                        </p>
+                    </div>
+                </figure>
+            </div>
+
+            <div class="col-12 col-lg-4 col-md-6 col-sm- align-self-center" id="row2">
+                <figure>
+                    <img src="IMG/segundo.jpeg">
+                    <div class="capa">
+                        <h3>¿Por que es importante <br> hacer ejercicio?</h3>
+                        <p>
+                            <button type="button" class="btn btn-outline-light">Mas info</button>
+                        </p>
+                    </div>
+                </figure>
+            </div>
+            <div class="col-12 col-lg-4 col-md-12 col-sm align-self-center" id="row2">
+                <figure>
+                    <img src="IMG/terceera.jpg">
+                    <div class="capa">
+                        <h3>Clases precenciales<br> ¡ENTRENA CON NOSOTROS!
+                        </h3>
+                        <p>
+
+                            <button type="button" class="btn btn-outline-light">Mas info</button>
+                        </p>
+                    </div>
+                </figure>
+            </div>
+        </div>
+    </div>
+    <!--finalde las imagenes del centro-->
+    <!---comienzo de tarjetas-->
+    <div class="row justify-content-center mt-2" id="row1">
+        <div class="header" id="header1">
+            <h2>Nuestros programas</h2>
+        </div> 
+            <section class="col-md-4 col-lg-2 me-lg-4 col-sm-6 align-self-center">
+                <div class="card" style="width: 13rem;">
+                    <img src="IMG/cuarta.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">TRX</h5>
+                        <p class="card-text text-center">
+                            Ejercicios funcionales que se desarrollana través de un arnés sujeto por un punto de anclaje<br> SOLO EN GYM STYLE'S.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="col-md-4 col-lg-2 me-lg-4 col-sm-6 align-self-center ">
+                <div class="card" style="width: 13rem;">
+                    <img src="IMG/quinta.jpg" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h6 class="card-title">YOGA</h6>
+                        <p class="card-text text-center">
+                            Ejercita la mente y el cuerpo en nuestro gimnacio para que asi enfatices la meditación y la liberación de estres
+                            <BR> SOLO GYM STYLE´S
+                        </p>
+                    </div>
+                </div>
+            </section>
+        
+            <section class="col-md-4 col-lg-2 me-lg-4 col-sm-6 align-self-center ">
+                <div class="card" style="width: 13rem;">
+                    <img src="IMG/boxeo.jpg" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">BOXEO</h5>
+                        <p class="card-text text-center">
+                            Te ayudará a eliminar las tensiones acumuladas en el día a día. El estrés y tensiones acumulados en el cuerpo<br> SOLO GYM STYLE´S
+
+                        </p>
+
+                    </div>
+                </div>
+            </section>
+            <section class="col-md-4 col-lg-2 me-lg-4 col-sm-6 align-self-center">
+                <div class="card" style="width: 13rem;">
+                    <img src="IMG/septima.jpg" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">EDU. FUNCIONAL</h5>
+                        <p class="card-text text-center">
+                            Mejora la relación entre el sistema nervioso y el musculoesquelético, obteniendo así buenos resultados.
+                            <br> SOLO GYM STYLE´S
+                        </p>
+
+                    </div>
+                </div>
+            </section>
+    </div>
+    <div class="title-cards">
+        <h2>Encuentra estabilidad en...</h2>
+    </div>
+    <div class="row justify-content-center mt-3" id="container-card2">
+        <section class="col-md-4 col-lg-2 me-lg-4 col-sm-6 align-self-center">
+            <div class="card" style="width: 13rem;">
+                <img src="IMG/ocho.jpg" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <h5 class="card-title">CUERPO</h5>
+                    <p class="card-text text-center">
+                        El ejercicio suministra oxígeno y nutrientes a los tejidos y ayuda a que el sistema cardiovascular funcione de manera más eficiente.
+                        <br> SOLO GYM STYLE´S
+                    </p>
+
+                </div>
+            </div>
+        </section>
+        <section class="col-md-4 col-lg-2 me-lg-4 col-sm-6 align-self-center ">
+            <div class="card" style="width: 13rem;">
+                <img src="IMG/noveno.jpg" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <h5 class="card-title">MENTE</h5>
+                    <p class="card-text text-center">
+                        El ejercicio físico hace que el cerebro libere endorfinas, dopamina y norepinefrina, sustancias asociadas con una mejora de las funciones cognitivas
+                        <br> SOLO GYM STYLE´S
+                    </p>
+
+                </div>
+            </div>
+        </section>
+        <section class="col-md-4 col-lg-2 me-lg-4 col-sm-6 align-self-center">
+            <div class="card" style="width: 13rem;">
+                <img src="IMG/decimo.jpg" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <h5 class="card-title">BIENESTAR</h5>
+                    <p class="card-text text-center">
+                        Es importante el alimento balanceado ya que ayuda al desarrollo del organismo y el funcionamiento del sistema inmune
+                        <br> SOLO GYM STYLE´S
+                    </p>
+
+                </div>
+            </div>
+        </section>
+        <section class="col-md-4 col-lg-2 me-lg-4 col-sm-6 align-self-center">
+            <div class="card" style="width: 13rem;">
+                <img src="IMG/once.jpg" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <h5 class="card-title">EMOCIONAL</h5>
+                    <p class="card-text text-center">
+                        El ejercicio físico ayuda a la autorregulación ,su práctica reduce la intensidad de emociones como la ira, la agresividad, la ansiedad y la depresión
+                        <br> SOLO GYM STYLE´S
+                    </p>
+
+                </div>
+            </div>
+        </section>
+    </div>
+    </div>
+    <!--Fin   Tarjetas-->
+    <!--Comienzo de footer-->
+    <footer>
+        <nav class="navbar navbar-expand-lg navbar-light" id="footer">
+            <div class="container-fluid">
+                <span class="navbar-brand mb-0 h1">
+                            <P id="p">
+                                COPYRIGHT&copy;2021 GYM STYLE'S<BR>
+                                <i class="fab fa-facebook"></i>
+                                <i class="fab fa-whatsapp"></i>
+                                <i class="fab fa-twitter"></i>
+                                <i class="fab fa-instagram"></i>
+                                
+                            </P>
+                            </span>
+            </div>
+        </nav>
+    </footer>
+    <!--final del footer-->
+    <script src="js/GYMSTYLE.js"></script>
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>
